@@ -1,0 +1,17 @@
+node_modules
+package-lock.json
+
+abi
+docs
+
+artifacts
+cache
+typechain-types
+
+coverage*
+*.log*
+gas-report.txt
+
+.husky/_/
+
+LICENSE

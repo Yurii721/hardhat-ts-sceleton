@@ -1,0 +1,45 @@
+# Hardhat files.
+cache
+artifacts
+
+# Artifacts that TypeChain creates.
+typechain
+typechain-types
+
+# Logs.
+logs
+*.log
+
+# `solidity-coverage`.
+coverage
+coverage.json
+
+# Dependency directory.
+node_modules
+
+# Debug log from npm.
+npm-debug.log
+
+# Local env variables.
+.env
+
+# macOS.
+.DS_Store
+
+# IntelliJ IDE.
+.idea
+
+# yarn.
+.yarn/*
+.yarn-integrity
+yarn-debug.log*
+yarn-error.log*
+
+# Track of all the implementation contracts of the `@openzeppelin/hardhat-upgrades` plugin.
+.openzeppelin
+
+# The output file of `hardhat-gas-reporter`.
+gas-report.txt
+
+# Output of `solc`.
+bin

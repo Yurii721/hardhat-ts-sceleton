@@ -1,0 +1,12 @@
+[
+  "constructor()",
+  "error SetEvenToOddNumber(uint256)",
+  "error SetPositiveNumberToZero()",
+  "event OwnershipTransferred(address indexed,address indexed)",
+  "event PositiveEvenSet(uint256,uint256)",
+  "function owner() view returns (address)",
+  "function positiveEven() view returns (uint256)",
+  "function renounceOwnership()",
+  "function setPositiveEven(uint256)",
+  "function transferOwnership(address)"
+]

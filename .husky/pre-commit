@@ -1,0 +1,10 @@
+#!/usr/bin/env sh
+. "$(dirname -- "$0")/_/husky.sh"
+
+npm run dev:abi
+git add abi/
+
+npm run dev:docs
+git add docs/
+
+npx lint-staged

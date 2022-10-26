@@ -1,0 +1,4 @@
+{
+    "filter_paths": "node_modules/|interfaces/|mocks/|from-dependencies/|hardhat/|@openzeppelin/",
+    "detectors_to_exclude": "naming-convention,solc-version,similar-names,timestamp"
+}

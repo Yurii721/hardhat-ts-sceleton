@@ -97,6 +97,12 @@ const config: HardhatUserConfig = {
     networks: {
         hardhat: {
             allowUnlimitedContractSize: !ENABLED_OPTIMIZER,
+            accounts: {
+                // Default value: "10000000000000000000000" (10000 ETH).
+                accountsBalance: process.env.ACCOUNT_BALANCE || "10000000000000000000000",
+                // Default value: 20.
+                count: process.env.NUMBER_OF_ACCOUNTS ? +process.env.NUMBER_OF_ACCOUNTS : 20
+            },
             forking: {
                 url: process.env.FORKING_URL || "",
                 enabled: process.env.FORKING !== undefined
@@ -197,19 +203,6 @@ const config: HardhatUserConfig = {
         // keep: true
     }
 };
-
-// Extra settings for the Hardhat network.
-import { HardhatNetworkHDAccountsUserConfig } from "hardhat/types";
-if (process.env.NUMBER_OF_ACCOUNTS)
-    // Default value: 20.
-    // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
-    (config.networks!.hardhat!.accounts! as HardhatNetworkHDAccountsUserConfig).count = +process.env.NUMBER_OF_ACCOUNTS;
-
-if (process.env.ACCOUNT_BALANCE)
-    // Default value: "10000000000000000000000" (10000 ETH).
-    // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
-    (config.networks!.hardhat!.accounts! as HardhatNetworkHDAccountsUserConfig).accountsBalance =
-        process.env.ACCOUNT_BALANCE;
 
 // By default fork from the latest block.
 if (process.env.FORKING_BLOCK_NUMBER)
